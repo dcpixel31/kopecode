@@ -22,3 +22,28 @@ product.overrides.json
 *.snap.actual
 *.tsbuildinfo
 .vscode-test
+
+# Claude AI assistant files
+.claude/
+
+# Java language server runtime data (keep folder structure, exclude runtime contents)
+extensions/kope-java/server-data/.metadata/
+extensions/kope-java/server-data/**/
+!extensions/kope-java/server-data/.gitkeep
+
+# Java language server runtime files (logs, native libs, OSGi cache)
+extensions/kope-java/server/config_*/org.eclipse.*/
+extensions/kope-java/server/config_*/*.log
+extensions/kope-java/server/configuration/org.eclipse.*/
+extensions/kope-java/server/configuration/*.log
+
+# Java language server binary files (JARs and native libraries)
+extensions/kope-java/server/**/*.jar
+extensions/kope-java/server/**/*.dll
+
+# VS Code debug extensions (auto-generated)
+extensions/ms-vscode.js-debug*/
+extensions/ms-vscode.vscode-js-profile-table/
+
+# User-specific scripts
+clear-workspace.bat

@@ -1,0 +1,40 @@
+{
+    "name": "kope-java",
+    "version": "0.0.1",
+    "publisher": "KopeCode",
+    "private": true,
+    "license": "MIT",
+    "engines": {
+        "vscode": "*"
+    },
+    "main": "./dist/extension.js",
+    "activationEvents": [
+        "onStartupFinished",
+        "onLanguage:java"
+    ],
+	"contributes": {
+        "languages": [{
+            "id": "java",
+            "aliases": ["Java", "java"],
+            "extensions": [ ".java", ".jav" ]
+        }],
+        "configuration": {
+			"title": "KopeCode Java",
+			"properties": {
+				"kope-java.javaHome": {
+					"type": "string",
+					"default": null,
+					"description": "Specifies the absolute path to the JDK (version 17+) used to launch the Java Language Server."
+				}
+			}
+		}
+    },
+    "dependencies": {
+        "vscode-languageclient": "^9.0.1"
+    },
+    "devDependencies": {
+        "@types/node": "^24.0.14",
+        "@types/vscode": "^1.102.0",
+        "typescript": "^5.3.3"
+    }
+}
